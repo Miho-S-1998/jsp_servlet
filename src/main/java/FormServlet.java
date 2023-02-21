@@ -10,12 +10,9 @@ import javax.servlet.http.HttpSession;
 public class FormServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
 		
-		request.setCharacterEncoding("UTF-8");
-		HttpSession session=request.getSession();
-		String message=request.getParameter("message");
-		request.setAttribute("message", message);
-		session.setAttribute("message", message);
-		
+
+            request.getSession(false);
+
 		String view="/WEB-INF/lib/form.jsp";
 		RequestDispatcher dispatcher=request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);

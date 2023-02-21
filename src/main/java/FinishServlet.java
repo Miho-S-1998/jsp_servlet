@@ -19,7 +19,6 @@ public class FinishServlet extends HttpServlet{
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session=request.getSession();
 		String article=(String) session.getAttribute("article");
-		session.setAttribute("article",article);
 		request.setAttribute("article", article);
 		
 		String view="/WEB-INF/lib/finish.jsp";
