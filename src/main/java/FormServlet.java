@@ -11,7 +11,7 @@ public class FormServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
 		
 
-            request.getSession(false);
+           　　　request.getSession(false);
 
 		String view="/WEB-INF/lib/form.jsp";
 		RequestDispatcher dispatcher=request.getRequestDispatcher(view);
